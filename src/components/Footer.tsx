@@ -71,18 +71,18 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-terracotta" />
-                <a href="tel:+11234567890" className="text-gray-300 hover:text-terracotta">+1 (123) 456-7890</a>
+                <a href="tel:+11234567890" className="text-gray-300 hover:text-terracotta">+1 8082149269 / 7977289307</a>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-terracotta" />
-                <a href="mailto:info@archvista.com" className="text-gray-300 hover:text-terracotta">info@archvista.com</a>
+                <a href="mailto:precisiondesign97@gmail.com" className="text-gray-300 hover:text-terracotta">precisiondesign97@gmail.com</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ARCHVISTA. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} PRECISION DESIGN. All rights reserved.</p>
         </div>
       </div>
     </footer>

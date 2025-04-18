@@ -20,7 +20,7 @@ const About = () => {
       socialLinks: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'david@archvista.com',
+        email: 'david@PRECISION DESIGN.com',
       },
     },
     {
@@ -31,7 +31,7 @@ const About = () => {
       socialLinks: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'sarah@archvista.com',
+        email: 'sarah@PRECISION DESIGN.com',
       },
     },
     {
@@ -42,7 +42,7 @@ const About = () => {
       socialLinks: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'michael@archvista.com',
+        email: 'michael@PRECISION DESIGN.com',
       },
     },
     {
@@ -53,7 +53,7 @@ const About = () => {
       socialLinks: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'emma@archvista.com',
+        email: 'emma@PRECISION DESIGN.com',
       },
     },
   ];
@@ -100,7 +100,7 @@ const About = () => {
 
       <main>
         <Hero
-          title="About ARCHVISTA"
+          title="About PRECISION DESIGN"
           subtitle="Designing the future through innovative architecture"
           backgroundImage="https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?auto=format&fit=crop&w=1920&q=80"
           height="lg"
@@ -117,7 +117,7 @@ const About = () => {
                   centered={false}
                 />
                 <p className="text-slate/80 mb-6">
-                  Founded in 1998 by David Chen, ARCHVISTA began with a vision to create spaces that inspire and
+                  Founded in 1998 by David Chen, PRECISION DESIGN began with a vision to create spaces that inspire and
                   transform lives. What started as a small studio has grown into a renowned architectural firm with a
                   global presence.
                 </p>
@@ -127,7 +127,7 @@ const About = () => {
                   innovation, and sustainability.
                 </p>
                 <p className="text-slate/80">
-                  Today, ARCHVISTA continues to push boundaries in architectural design, embracing new technologies and
+                  Today, PRECISION DESIGN continues to push boundaries in architectural design, embracing new technologies and
                   methodologies while staying true to our founding principles of creating meaningful spaces that stand the
                   test of time.
                 </p>
@@ -136,7 +136,7 @@ const About = () => {
               <div className="md:w-1/2">
                 <img
                   src="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?auto=format&fit=crop&w=800&q=80"
-                  alt="ARCHVISTA Office"
+                  alt="PRECISION DESIGN Office"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
               </div>

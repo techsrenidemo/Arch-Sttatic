@@ -53,7 +53,7 @@ const Contact = () => {
                     <div>
                       <h3 className="text-lg font-semibold mb-2">Call Us</h3>
                       <p className="text-slate/80">
-                        +1 (123) 456-7890<br />
+                        +1 8082149269 / 7977289307<br />
                         +1 (123) 456-7891
                       </p>
                     </div>
@@ -66,8 +66,8 @@ const Contact = () => {
                     <div>
                       <h3 className="text-lg font-semibold mb-2">Email Us</h3>
                       <p className="text-slate/80">
-                        info@archvista.com<br />
-                        careers@archvista.com
+                        precisiondesign97@gmail.com<br />
+                        careers@PRECISION DESIGN.com
                       </p>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ const Contact = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="ARCHVISTA office location"
+            title="PRECISION DESIGN office location"
           ></iframe>
         </section>
       </main>

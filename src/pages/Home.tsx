@@ -65,14 +65,14 @@ const Home = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "ARCHVISTA transformed our vision into reality. Their attention to detail and innovative approach resulted in a building that exceeds our expectations.",
+      quote: "PRECISION DESIGN transformed our vision into reality. Their attention to detail and innovative approach resulted in a building that exceeds our expectations.",
       author: "Sarah Johnson",
       position: "CEO",
       company: "Nexus Properties"
     },
     {
       id: 2,
-      quote: "Working with the team at ARCHVISTA was an absolute pleasure. Their expertise and creativity brought our project to life in ways we couldn't imagine.",
+      quote: "Working with the team at PRECISION DESIGN was an absolute pleasure. Their expertise and creativity brought our project to life in ways we couldn't imagine.",
       author: "Michael Chen",
       position: "Director",
       company: "Urban Development Corp."
@@ -118,7 +118,7 @@ const Home = () => {
                 <div className="w-20 h-1 bg-terracotta mb-6" />
                 
                 <p className="text-slate/80 mb-6">
-                  ARCHVISTA is a leading architectural firm dedicated to creating exceptional spaces that blend 
+                  PRECISION DESIGN is a leading architectural firm dedicated to creating exceptional spaces that blend 
                   functionality, aesthetics, and sustainability. With 25 years of experience, we've established 
                   ourselves as innovative problem-solvers in the architectural landscape.
                 </p>
