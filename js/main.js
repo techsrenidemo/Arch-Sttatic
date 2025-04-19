@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Add more project objects for other sections (project3, project4, etc.)
     ];
 
-    const itemsPerSlide = 4; // Number of items per slide
+    const itemsPerSlide = 3; // Number of items per slide
 const carouselInterval = 3000; // Timer interval in milliseconds (3 seconds)
 
 projects.forEach((project) => {
