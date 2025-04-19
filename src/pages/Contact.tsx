@@ -67,7 +67,7 @@ const Contact = () => {
                       <h3 className="text-lg font-semibold mb-2">Email Us</h3>
                       <p className="text-slate/80">
                         precisiondesign97@gmail.com<br />
-                        careers@PRECISION DESIGN.com
+                        careers
                       </p>
                     </div>
                   </div>

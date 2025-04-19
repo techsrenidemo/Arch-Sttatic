@@ -20,7 +20,7 @@ const About = () => {
       socialLinks: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'david@PRECISION DESIGN.com',
+        email: 'david',
       },
     },
     {
@@ -31,7 +31,7 @@ const About = () => {
       socialLinks: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'sarah@PRECISION DESIGN.com',
+        email: 'sarah',
       },
     },
     {
@@ -42,7 +42,7 @@ const About = () => {
       socialLinks: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'michael@PRECISION DESIGN.com',
+        email: 'michael',
       },
     },
     {
@@ -53,7 +53,7 @@ const About = () => {
       socialLinks: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'emma@PRECISION DESIGN.com',
+        email: 'emma',
       },
     },
   ];
