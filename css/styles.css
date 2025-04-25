@@ -523,6 +523,34 @@ p.lead.mb-5 {
   color: #fff;
 }
 
+/* Project Page */
+
+.container.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container.gallery .boxed-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.container.gallery .boxed-gallery .gallery-images {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.container.gallery .boxed-gallery .gallery-images img {
+  width: 100%;
+}
+
+
+
 /* Team Section */
 .team-card {
   margin-bottom: 2rem;

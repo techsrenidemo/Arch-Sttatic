@@ -12,7 +12,7 @@
     }
 
     .container.mt-5 {
-        margin-bottom: -80%;
+        margin-bottom: 0%;
     }
 
     a.navbar-brand {
@@ -29,7 +29,6 @@
 
     p.lead.mb-5 {
         font-size: 1em;
-        font-weight: 400;
     }
 
     .btn {
@@ -58,4 +57,8 @@
       .carousel-item img {
         max-height: 500px; /* Larger images on bigger screens */
       }
+
+      /* gallery */
+
+      
 }
