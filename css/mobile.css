@@ -1,0 +1,61 @@
+/* MEDIA QUERY FOR MAX WIDTH 430PX */
+
+@media (max-width: 430px) {
+    p.lead.mb-5 {
+        margin-bottom: 0px !important;
+    }
+    
+    .carousel-control-next, .carousel-control-prev {
+        bottom: 178px;
+        width: 80%;
+        opacity: 1.5;
+    }
+
+    .container.mt-5 {
+        margin-bottom: -80%;
+    }
+
+    a.navbar-brand {
+        font-size: 1.2em;
+    }
+
+    /* .hero-section {
+        background: white;
+    } */
+
+    h1.display-4.fw-bold {
+        font-size: 1.4em;
+    }
+
+    p.lead.mb-5 {
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .btn {
+        font-size: .83em;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 22.4px;
+    }
+
+    .btn-outline-light {
+        border-color: white;
+        color: #000000;
+        background: #ffffffab;
+    }
+
+    .carousel-inner {
+        display: block; /* Stack images vertically on small screens */
+      }
+    
+      .carousel-item img {
+        max-height: 300px !important; /* Restrict height for better viewability */
+      }
+
+      .carousel-item img {
+        max-height: 500px; /* Larger images on bigger screens */
+      }
+}

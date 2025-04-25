@@ -20,6 +20,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
   </head>
   <body>
     <!-- Navigation -->
@@ -70,257 +71,265 @@
       </div>
     </header>
 
-    <!-- Project 1 -->
-
-    <section class="container py-5" id="project1">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="display-5 mb-4">Tank Recidence</h2>
-          <p class="lead mb-5">Malad West | 2BHK</p>
-        </div>
-      </div>
-      <!-- Image Carousel -->     
-      <div class="container mt-5">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carousel-inner">
-                <!-- Carousel items will be injected dynamically -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-      </div>
-
-      <!-- Modal for Full-Screen View -->
-      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="imageModalLabel">Image Caption</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="container my-5">
+      <!-- Dynamic Project Carousels -->
+      <!-- Replace this section with actual project carousels -->
+      <h2 class="py-5">Project 1: Malad West | 2BHK</h2>
+      <div id="project1Carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/tanks/bathroom-1.jpg" class="d-block w-100" alt="Image 1" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/tanks/bathroom-2.jpg" class="d-block w-100" alt="Image 2" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/tanks/bathroom-3.jpg" class="d-block w-100" alt="Image 3" data-caption="Bathroom"></div>
                   </div>
-                  <div class="modal-body text-center">
-                      <img src="" alt="Full-Screen Image" class="img-fluid" id="modal-image">
+              </div>
+              <div class="carousel-item">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/tanks/bathroom-4.jpg" class="d-block w-100" alt="Image 4" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/tanks/bedroom-1.jpg" class="d-block w-100" alt="Image 5" data-caption="Bedroom"></div>
+                      <div class="p-2"><img src="img/tanks/bedroom-2.jpg" class="d-block w-100" alt="Image 6" data-caption="Bedroom"></div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                    <div class="p-2"><img src="img/tanks/bedroom-3.jpg" class="d-block w-100" alt="Image 7" data-caption="Bedroom"></div>
+                    <div class="p-2"><img src="img/tanks/bedroom-4.jpg" class="d-block w-100" alt="Image 8" data-caption="Bedroom"></div>
+                    <div class="p-2"><img src="img/tanks/bedroom-5.jpg" class="d-block w-100" alt="Image 9" data-caption="Bedroom"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+            <div class="d-flex">
+                <div class="p-2"><img src="img/tanks/bedroom-6.jpg" class="d-block w-100" alt="Image 10" data-caption="Bedroom"></div>
+                <div class="p-2"><img src="img/tanks/kitchen-1.jpg" class="d-block w-100" alt="Image 11" data-caption="Kitchen"></div>
+                <div class="p-2"><img src="img/tanks/kitchen-2.jpg" class="d-block w-100" alt="Image 12" data-caption="Kitchen"></div>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex">
+                  <div class="p-2"><img src="img/tanks/kitchen-3.jpg" class="d-block w-100" alt="Image 13" data-caption="Kitchen"></div>
+                  <div class="p-2"><img src="img/tanks/kitchen-4.jpg" class="d-block w-100" alt="Image 14" data-caption="Kitchen"></div>
+                  <div class="p-2"><img src="img/tanks/livingroom-1.jpg" class="d-block w-100" alt="Image 15" data-caption="Livingroom"></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex">
+                  <div class="p-2"><img src="img/tanks/livingroom-2.jpg" class="d-block w-100" alt="Image 16" data-caption="Livingroom"></div>
+                  <div class="p-2"><img src="img/tanks/kitchen-4.jpg" class="d-block w-100" alt="Image 17" data-caption="Kitchen"></div>
+                  <div class="p-2"><img src="img/tanks/livingroom-1.jpg" class="d-block w-100" alt="Image 18" data-caption="Livingroom"></div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#project1Carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#project1Carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <h2 class="py-5">Project 2: Malad West | 2BHK</h2>
+        <div id="project2Carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/karias/bathroom-1.jpg" class="d-block w-100" alt="Image 1" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/karias/bathroom-2.jpg" class="d-block w-100" alt="Image 2" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/karias/bedroom-1.jpg" class="d-block w-100" alt="Image 3" data-caption="Bedroom"></div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/karias/bedroom-2.jpg" class="d-block w-100" alt="Image 4" data-caption="Bedroom"></div>
+                      <div class="p-2"><img src="img/karias/bedroom-3.jpg" class="d-block w-100" alt="Image 5" data-caption="Bedroom"></div>
+                      <div class="p-2"><img src="img/karias/bedroom-4.jpg" class="d-block w-100" alt="Image 6" data-caption="Bedroom"></div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                    <div class="p-2"><img src="img/karias/bedroom-5.jpg" class="d-block w-100" alt="Image 7" data-caption="Bedroom"></div>
+                    <div class="p-2"><img src="img/karias/bedroom-6.jpg" class="d-block w-100" alt="Image 8" data-caption="Bedroom"></div>
+                    <div class="p-2"><img src="img/karias/dining-1.jpg" class="d-block w-100" alt="Image 9" data-caption="Dining"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+            <div class="d-flex">
+                <div class="p-2"><img src="img/karias/dining-2.jpg" class="d-block w-100" alt="Image 10" data-caption="Dining"></div>
+                <div class="p-2"><img src="img/karias/kitchen-1.jpg" class="d-block w-100" alt="Image 11" data-caption="Kitchen"></div>
+                <div class="p-2"><img src="img/karias/kitchen-2.jpg" class="d-block w-100" alt="Image 12" data-caption="Kitchen"></div>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex">
+                  <div class="p-2"><img src="img/karias/livingroom-1.jpg" class="d-block w-100" alt="Image 13" data-caption="Livingroom"></div>
+                  <div class="p-2"><img src="img/karias/livingroom-2.jpg" class="d-block w-100" alt="Image 14" data-caption="Livingroom"></div>
+                  <div class="p-2"><img src="img/karias/livingroom-3.jpg" class="d-block w-100" alt="Image 15" data-caption="Livingroom"></div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#project2Carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#project2Carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <h2 class="py-5">Project 3: Pedder Road | 1BHK</h2>
+        <div id="project3Carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/dandas/bathroom-1.jpg" class="d-block w-100" alt="Image 1" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/dandas/bathroom-2.jpg" class="d-block w-100" alt="Image 2" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/dandas/bathroom-3.jpg" class="d-block w-100" alt="Image 3" data-caption="Bathroom"></div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/dandas/bathroom-4.jpg" class="d-block w-100" alt="Image 4" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/dandas/kitchen-1.jpg" class="d-block w-100" alt="Image 5" data-caption="Kitchen"></div>
+                      <div class="p-2"><img src="img/dandas/kitchen-2.jpg" class="d-block w-100" alt="Image 6" data-caption="Kitchen"></div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex">
+                    <div class="p-2"><img src="img/dandas/kitchen-3.jpg" class="d-block w-100" alt="Image 7" data-caption="Kitchen"></div>
+                    <div class="p-2"><img src="img/dandas/livingroom-1.jpg" class="d-block w-100" alt="Image 8" data-caption="Livingroom"></div>
+                    <div class="p-2"><img src="img/dandas/livingroom-2.jpg" class="d-block w-100" alt="Image 9" data-caption="Livingroom"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex">
+                  <div class="p-2"><img src="img/dandas/livingroom-3.jpg" class="d-block w-100" alt="Image 10" data-caption="Livingroom"></div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#project3Carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#project3Carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <h2 class="py-5">Project 4: Pedder Road | Kitchen, Bedroom & Toilet</h2>
+        <div id="project4Carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/vasas/bedroom-1.jpg" class="d-block w-100" alt="Image 1" data-caption="Bedroom"></div>
+                      <div class="p-2"><img src="img/vasas/bedroom-2.jpg" class="d-block w-100" alt="Image 2" data-caption="Bedroom"></div>
+                      <div class="p-2"><img src="img/vasas/kitchen-1.jpg" class="d-block w-100" alt="Image 3" data-caption="Kitchen"></div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/vasas/kitchen-2.jpg" class="d-block w-100" alt="Image 4" data-caption="Kitchen"></div>
                   </div>
               </div>
           </div>
-      </div>
-    </section>
-
-    <!-- Project 2 -->
-
-    <section class="container py-5" id="project2">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="display-5 mb-4">Karia's Recidence</h2>
-          <p class="lead mb-5">Malad West | 2BHK</p>
+          <button class="carousel-control-prev" type="button" data-bs-target="#project4Carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#project4Carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
         </div>
-      </div>
-      <!-- Image Carousel -->     
-      <div class="container mt-5">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
-            <div class="carousel-inner" id="carousel-inner">
-                <!-- Carousel items will be injected dynamically -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-      </div>
 
-      <!-- Modal for Full-Screen View -->
-      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="imageModalLabel">Image Caption</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                      <img src="" alt="Full-Screen Image" class="img-fluid" id="modal-image">
+        <h2 class="py-5">Project 5: Andheri West | 1BHK</h2>
+        <div id="project5Carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/wadhwas/bathroom-1.jpg" class="d-block w-100" alt="Image 1" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/wadhwas/bathroom-2.jpg" class="d-block w-100" alt="Image 2" data-caption="Bathroom"></div>
+                      <div class="p-2"><img src="img/wadhwas/bathroom-3.jpg" class="d-block w-100" alt="Image 3" data-caption="Bathroom"></div>
                   </div>
               </div>
-          </div>
-      </div>
-    </section>
-
-    <!-- Project 3 -->
-
-    <section class="container py-5" id="project3">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="display-5 mb-4">Dandaa's Recidence</h2>
-          <p class="lead mb-5">Pedder Road | BHK</p>
-        </div>
-      </div>
-      <!-- Image Carousel -->     
-      <div class="container mt-5">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carousel-inner">
-                <!-- Carousel items will be injected dynamically -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-      </div>
-
-      <!-- Modal for Full-Screen View -->
-      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="imageModalLabel">Image Caption</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                      <img src="" alt="Full-Screen Image" class="img-fluid" id="modal-image">
+              <div class="carousel-item">
+                  <div class="d-flex">
+                      <div class="p-2"><img src="img/wadhwas/kitchen-1.jpg" class="d-block w-100" alt="Image 4" data-caption="Kitchen"></div>
+                      <div class="p-2"><img src="img/wadhwas/kitchen-2.jpg" class="d-block w-100" alt="Image 5" data-caption="Kitchen"></div>
+                      <div class="p-2"><img src="img/wadhwas/kitchen-3.jpg" class="d-block w-100" alt="Image 6" data-caption="Kitchen"></div>
                   </div>
               </div>
-          </div>
-      </div>
-    </section>
-
-    <!-- Project 4 -->
-
-    <section class="container py-5" id="project4">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="display-5 mb-4">Vasa's Recidence</h2>
-          <p class="lead mb-5">Pedder Road | Kitchen, Bedroom, Toilet</p>
-        </div>
-      </div>
-      <!-- Image Carousel -->     
-      <div class="container mt-5">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carousel-inner">
-                <!-- Carousel items will be injected dynamically -->
+              <div class="carousel-item">
+                <div class="d-flex">
+                    <div class="p-2"><img src="img/wadhwas/livingroom-1.jpg" class="d-block w-100" alt="Image 7" data-caption="Livingroom"></div>
+                    <div class="p-2"><img src="img/wadhwas/livingroom-2.jpg" class="d-block w-100" alt="Image 8" data-caption="Livingroom"></div>
+                    <div class="p-2"><img src="img/wadhwas/livingroom-3.jpg" class="d-block w-100" alt="Image 9" data-caption="Livingroom"></div>
+                </div>
             </div>
-            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button> -->
-        </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#project5Carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#project5Carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
       </div>
 
-      <!-- Modal for Full-Screen View -->
-      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="imageModalLabel">Image Caption</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                      <img src="" alt="Full-Screen Image" class="img-fluid" id="modal-image">
-                  </div>
+      <h2 class="py-5">Project 6: Dahisar East | 1BHK</h2>
+      <div id="project6Carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="d-flex">
+                  <div class="p-2"><img src="img/patels/bathroom-1.jpg" class="d-block w-100" alt="Image 1" data-caption="Bathroom"></div>
+                  <div class="p-2"><img src="img/patels/bathroom-2.jpg" class="d-block w-100" alt="Image 2" data-caption="Bathroom"></div>
+                  <div class="p-2"><img src="img/patels/bedroom-1.jpg" class="d-block w-100" alt="Image 3" data-caption="Bedroom"></div>
               </div>
           </div>
-      </div>
-    </section>
-
-    <!-- Project 5 -->
-
-    <section class="container py-5" id="project5">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="display-5 mb-4">Wadhwa's Recidence</h2>
-          <p class="lead mb-5">Andheri West | 1BHK</p>
-        </div>
-      </div>
-      <!-- Image Carousel -->     
-      <div class="container mt-5">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carousel-inner">
-                <!-- Carousel items will be injected dynamically -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-      </div>
-
-      <!-- Modal for Full-Screen View -->
-      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="imageModalLabel">Image Caption</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                      <img src="" alt="Full-Screen Image" class="img-fluid" id="modal-image">
-                  </div>
+          <div class="carousel-item">
+              <div class="d-flex">
+                  <div class="p-2"><img src="img/patels/bedroom-2.jpg" class="d-block w-100" alt="Image 4" data-caption="Bedroom"></div>
+                  <div class="p-2"><img src="img/patels/bedroom-3.jpg" class="d-block w-100" alt="Image 5" data-caption="Bedroom"></div>
+                  <div class="p-2"><img src="img/patels/kitchen-1.jpg" class="d-block w-100" alt="Image 6"data-caption="Kitchen"></div>
               </div>
           </div>
-      </div>
-    </section>
-
-    <!-- Project 6 -->
-
-    <section class="container py-5" id="project6">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="display-5 mb-4">Patel's Recidence</h2>
-          <p class="lead mb-5">Dahisar East | 1BHK</p>
-        </div>
-      </div>
-      <!-- Image Carousel -->     
-      <div class="container mt-5">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carousel-inner">
-                <!-- Carousel items will be injected dynamically -->
+          <div class="carousel-item">
+            <div class="d-flex">
+                <div class="p-2"><img src="img/patels/kitchen-2.jpg" class="d-block w-100" alt="Image 7" data-caption="Kitchen"></div>
+                <div class="p-2"><img src="img/patels/kitchen-3.jpg" class="d-block w-100" alt="Image 8" data-caption="Kitchen"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#project6Carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#project6Carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
-      <!-- Modal for Full-Screen View -->
+      <!-- Image Modal -->
+      
       <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="imageModalLabel">Image Caption</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                      <img src="" alt="Full-Screen Image" class="img-fluid" id="modal-image">
-                  </div>
-              </div>
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="imageModalLabel">Image Caption</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img id="modalImage" src="" alt="Image" class="img-fluid rounded">
+            </div>
           </div>
-      </div>
-    </section>
+        </div>
+      </div>      
+  </div>
 
   
   

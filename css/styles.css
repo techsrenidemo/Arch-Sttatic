@@ -23,7 +23,7 @@ body {
   color: var(--color-secondary);
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 76px; /* For fixed navbar */
+  padding-top: 80px; /* For fixed navbar */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -69,6 +69,19 @@ a:hover {
 .btn-outline-light:hover {
   background-color: #fff;
   color: var(--color-primary);
+}
+
+.centered-button {
+  position: absolute; /* Position it absolutely in relation to its container */
+  top: 50%;           /* Move the button 50% from the top of the viewport */
+  left: 50%;          /* Move the button 50% from the left of the viewport */
+  transform: translate(-50%, -50%); /* Offset the button by 50% of its width and height */
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #f39c12; /* Example button color */
+  color: white;       /* Button text color */
+  border: none;       /* Optional: remove the border */
+  font-size: 16px;     /* Adjust font size */
+  cursor: pointer;    /* Make the cursor pointer to show it is clickable */
 }
 
 /* Navigation */
@@ -269,21 +282,70 @@ p.lead.mb-5 {
 /* carousel */
 
 .carousel {
-  height: 300px; /* Set fixed height for carousel */
+  height: 300px; /* Fixed height for carousel */
 }
 
 .carousel-inner {
-  height: 300px; /* Ensure inner content takes full height */
+  height: 100%;
 }
 
 .carousel-inner img {
-  height: 300px; /* Images take full height of carousel */
-  object-fit: cover; /* Ensure images are cropped properly to fit */
+  height: 290px; /* Fixed height for square thumbnail */
+  width: 300px !important; /* Fixed width for square thumbnail */
+  object-fit: cover; /* Ensures images fill the square without distortion */
+  border-radius: 10px; /* Optional: Rounded corners for better aesthetics */
+  margin: 0 auto; /* Centers the image */
 }
 
-img.d-block.w-100 {
-    max-width: fit-content;
-    max-height: 300px;
+/* Image Modal */
+.modal-dialog {
+  max-width: Auto; /* Ensure the modal does not exceed the viewport width */
+  max-height: 90vh; /* Modal fits within 90% of the viewport height */
+}
+
+.modal-content {
+  height: auto; /* Let the modal content adapt to its content */
+  max-height: 90vh; /* Ensure content doesn't overflow */
+  overflow-y: auto; /* Enable scrolling for overflowing content */
+}
+
+.modal-body img {
+  max-height: 75vh; /* Ensure the image fits within the modal */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Keep the image proportional */
+}
+
+
+/* Default for larger screens: Display images in a row */
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center images within the slide */
+  align-items: center; /* Vertically align images */
+  gap: 10px; /* Space between images */
+}
+
+/* Each image container */
+.d-flex > div {
+  flex: 1;
+  max-width: 33.33%; /* Three images per row */
+  box-sizing: border-box;
+}
+.p-2 {
+  padding: 5px;
+}
+/* Media query for smaller screens: only 1 image per slide */
+@media (max-width: 768px) {
+  .d-flex {
+      flex-direction: column; /* Stack images vertically */
+  }
+  .d-flex > div {
+      max-width: 100%; /* Full width for each image */
+  }
+  .carousel-inner img {
+      height: auto; /* Adjust height for better display */
+      width: 100%; /* Maintain responsive width */
+  }
 }
 
 /* Testimonials Section */
@@ -587,7 +649,8 @@ img.d-block.w-100 {
   .navbar-collapse {
     background-color: #fff;
     padding: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 20px 15px rgb(44 62 80 / 45%);
+    margin-top: 1em;
   }
 }
 
