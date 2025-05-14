@@ -735,8 +735,6 @@ p.lead.mb-5 {
   color: rgba(213, 213, 213, 0.75) !important;
 }
 
-/* WhatsApp Button */
-
 #whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -749,9 +747,39 @@ p.lead.mb-5 {
   transition: transform 0.3s ease;
 }
 
-#whatsapp-button:hover {
-  transform: scale(1.1);
+#whatsapp-button img {
+  width: 48px;
+  height: 48px;
 }
+
+/*  Mobile (smaller icon and padding) */
+@media (max-width: 480px) {
+  #whatsapp-button {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px;
+  }
+
+  #whatsapp-button img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*  Medium screens (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #whatsapp-button {
+    bottom: 18px;
+    right: 18px;
+    padding: 9px;
+  }
+
+  #whatsapp-button img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
 
 /* project gallery */
 
