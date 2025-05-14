@@ -732,5 +732,110 @@ p.lead.mb-5 {
 }
 
 .breadcrumb-item.active {
-  color: rgb(167 167 167 / 75%) !important;
+  color: rgba(213, 213, 213, 0.75) !important;
+}
+
+/* WhatsApp Button */
+
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+#whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+/* project gallery */
+
+.gallery {
+  column-gap: 10px;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.caption {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+  color: white;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.popup .caption {
+  color: white;
+  margin-top: 12px;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1 !important;
+  }
 }
