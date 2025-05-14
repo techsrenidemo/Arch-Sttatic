@@ -92,6 +92,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// whatsapp button
+
+  // const name = "'Your Name'"; // Replace this with dynamic name from input or backend
+  const message = `Hi. I'd like to chat.`;
+  const phoneNumber = "918082149269"; // Replace with your WhatsApp number (no "+" or dashes)
+
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+  document.getElementById("whatsapp-button").href = whatsappLink;
+
 
 
 
