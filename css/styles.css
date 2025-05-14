@@ -195,6 +195,7 @@ p.lead.mb-5 {
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
+  border-radius: 10px;
 }
 
 .service-card:hover {
@@ -728,4 +729,8 @@ p.lead.mb-5 {
   .section-title {
     margin-bottom: 2rem;
   }
+}
+
+.breadcrumb-item.active {
+  color: rgb(167 167 167 / 75%) !important;
 }
