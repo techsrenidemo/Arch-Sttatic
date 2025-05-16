@@ -18,16 +18,53 @@
 }
 
 /* Base Styles */
+
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 2.5s steps(18, end) 1s infinite alternate, blink 0.7s step-end infinite;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 18ch }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+
+
 body {
   font-family: var(--font-secondary);
   color: var(--color-secondary);
   line-height: 1.6;
   overflow-x: hidden;
   padding-top: 80px; /* For fixed navbar */
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary) !important;
 }
 
-h1, h2, h4, h5, h6 {
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-secondary) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: var(--color-secondary) !important;
+  }
+}
+
+.min-vh-100 {
+    min-height: 80vh !important;
+}
+
+h1, h2,h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: 600;
   color: var(--color-light);
@@ -167,6 +204,13 @@ a:hover {
   background-position: center;
   position: relative;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
 }
 
 .hero-overlay {
