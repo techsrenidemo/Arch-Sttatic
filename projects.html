@@ -134,6 +134,10 @@
         transition: transform 0.2s;
       }
     }
+      .image-slider.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto; /* avoid snapping while dragging */
+}
   </style>
 
   </head>
@@ -1047,11 +1051,12 @@
   let currentIndex = 0;
   let autoScrollIntervals = [];
 
-  // Duplicate images for seamless scroll
+  // Duplicate items for seamless scroll
   document.querySelectorAll('.image-slider').forEach(slider => {
     const track = slider.querySelector('.image-track');
     const items = track.innerHTML;
-    track.innerHTML += items;
+    track.innerHTML += items; // Double the content
+    slider.scrollLeft = 0;
   });
 
   // Popup logic
@@ -1086,31 +1091,30 @@
 
   popupPrev.addEventListener('click', showPrevImage);
   popupNext.addEventListener('click', showNextImage);
+  popupClose.addEventListener('click', closePopup);
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) closePopup();
+  });
 
-  popupClose.addEventListener('click', () => {
+  function closePopup() {
     popup.style.display = 'none';
     resumeAllAutoScroll();
-  });
+  }
 
-  popup.addEventListener('click', (e) => {
-    if (e.target === popup) {
-      popup.style.display = 'none';
-      resumeAllAutoScroll();
-    }
-  });
-
-  // Auto-scroll logic
+  // Auto-scroll logic with glitch-free loop
   function startAutoScroll(slider) {
     const track = slider.querySelector('.image-track');
     const scrollStep = 1;
     const scrollDelay = 20;
-    const totalScroll = track.scrollWidth / 2;
+    const singleSetWidth = track.scrollWidth / 2;
 
     const interval = setInterval(() => {
       if (popup.style.display === 'flex') return;
+
       slider.scrollLeft += scrollStep;
-      if (slider.scrollLeft >= totalScroll) {
-        slider.scrollLeft = 0;
+
+      if (slider.scrollLeft >= singleSetWidth) {
+        slider.scrollLeft -= singleSetWidth;
       }
     }, scrollDelay);
 
@@ -1128,30 +1132,77 @@
     });
   }
 
-  // Initialize sliders
+  // Swipe and drag on slider only (not popup)
   document.querySelectorAll('.image-slider').forEach(slider => {
+    const track = slider.querySelector('.image-track');
     startAutoScroll(slider);
 
-    // Add swipe support on the slider itself
-    let touchStartX = 0;
-    let touchEndX = 0;
+    let isDragging = false;
+    let startX;
+    let scrollStart;
 
+    // Mouse
+    slider.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX;
+      scrollStart = slider.scrollLeft;
+      pauseAllAutoScroll();
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const dx = e.pageX - startX;
+      slider.scrollLeft = scrollStart - dx;
+    });
+
+    slider.addEventListener('mouseup', () => {
+      isDragging = false;
+      resumeAllAutoScroll();
+    });
+
+    slider.addEventListener('mouseleave', () => {
+      isDragging = false;
+      resumeAllAutoScroll();
+    });
+
+    // Touch
     slider.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
+      isDragging = true;
+      startX = e.touches[0].pageX;
+      scrollStart = slider.scrollLeft;
+      pauseAllAutoScroll();
     });
 
-    slider.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      const swipeThreshold = 50;
-      const deltaX = touchEndX - touchStartX;
-      if (deltaX > swipeThreshold) {
-        slider.scrollLeft -= slider.offsetWidth;
-      } else if (deltaX < -swipeThreshold) {
-        slider.scrollLeft += slider.offsetWidth;
-      }
+    slider.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const dx = e.touches[0].pageX - startX;
+      slider.scrollLeft = scrollStart - dx;
     });
+
+    slider.addEventListener('touchend', () => {
+      isDragging = false;
+      resumeAllAutoScroll();
+    });
+
+    // Optional: left/right nav buttons inside slider
+    const leftBtn = slider.querySelector('.slider-left');
+    const rightBtn = slider.querySelector('.slider-right');
+
+    if (leftBtn && rightBtn) {
+      leftBtn.addEventListener('click', () => {
+        slider.scrollLeft -= 200;
+        pauseAllAutoScroll();
+      });
+
+      rightBtn.addEventListener('click', () => {
+        slider.scrollLeft += 200;
+        pauseAllAutoScroll();
+      });
+    }
   });
 </script>
+
 
 
     <!-- <script>
