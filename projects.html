@@ -1103,14 +1103,12 @@
   function startAutoScroll(slider) {
     const track = slider.querySelector('.image-track');
     const scrollStep = 1;
-    const scrollDelay = 20; // milliseconds
+    const scrollDelay = 20;
     const totalScroll = track.scrollWidth / 2;
 
     const interval = setInterval(() => {
       if (popup.style.display === 'flex') return;
-
       slider.scrollLeft += scrollStep;
-
       if (slider.scrollLeft >= totalScroll) {
         slider.scrollLeft = 0;
       }
@@ -1130,34 +1128,31 @@
     });
   }
 
+  // Initialize sliders
   document.querySelectorAll('.image-slider').forEach(slider => {
     startAutoScroll(slider);
+
+    // Add swipe support on the slider itself
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const swipeThreshold = 50;
+      const deltaX = touchEndX - touchStartX;
+      if (deltaX > swipeThreshold) {
+        slider.scrollLeft -= slider.offsetWidth;
+      } else if (deltaX < -swipeThreshold) {
+        slider.scrollLeft += slider.offsetWidth;
+      }
+    });
   });
-
-  // Swipe detection on popup image
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  popupImage.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-
-  popupImage.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipeGesture();
-  });
-
-  function handleSwipeGesture() {
-    const swipeThreshold = 50; // minimum px swipe for action
-    const deltaX = touchEndX - touchStartX;
-
-    if (deltaX > swipeThreshold) {
-      showPrevImage(); // swipe right
-    } else if (deltaX < -swipeThreshold) {
-      showNextImage(); // swipe left
-    }
-  }
 </script>
+
 
     <!-- <script>
       const popup = document.getElementById('popup');
