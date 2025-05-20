@@ -22,6 +22,120 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mobile.css">
 
+    <style>
+   
+    .image-slider {
+      display: flex;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      gap: 10px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .image-track {
+      display: flex;
+      gap: 10px;
+      animation: none;
+    }
+
+    .image-item {
+      flex: 0 0 auto;
+      width: 300px;
+      text-align: center;
+    }
+
+    .image-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .image-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+    }
+
+    .popup-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      text-align: center;
+    }
+
+    .popup-content img {
+      max-width: 100%;
+      max-height: 60vh;
+      border-radius: 10px;
+    }
+
+    .popup-caption {
+      margin-top: 10px;
+      color: white;
+      font-size: 16px;
+    }
+
+    .popup-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      z-index: 1001;
+    }
+
+    .popup-left { left: -60px; }
+    .popup-right { right: -60px; }
+    .popup-close {
+      top: -50px;
+      right: 0;
+      transform: none;
+    }
+
+    @media (max-width: 600px) {
+      .popup-button.popup-left { left: 10px; }
+      .popup-button.popup-right { right: 10px; }
+      .image-item {
+      flex: 0 0 auto;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+    }
+      .image-item img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: transform 0.2s;
+      }
+    }
+  </style>
+
   </head>
   <body>
     <!-- Whatsapp button -->
@@ -81,8 +195,408 @@
 
     <div class="title-line-1" ></div>
 
-  
-<!-- Gallery 1 -->
+  <!-- Slider 1 -->
+   <header class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-white">
+        <h1 class="display-4 fw-bold">The Tank Residence</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">Malad-West, 2-BHK</li>
+          </ol>
+          <div class="title-line"></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+  <div class="image-slider">
+    <div class="image-track">
+      <div class="image-item">
+        <img src="img/tanks/livingroom-1.jpg" alt="Forest by the lake" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/livingroom-2.jpg" alt="Forest by the lake" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/kitchen-1.jpg" alt="Mountain view" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/kitchen-2.jpg" alt="Serene water" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/kitchen-3.jpg" alt="Forest by the lake" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/kitchen-4.jpg" alt="kitchen-4.jpg" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bedroom-1.jpg" alt="Serene water" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bedroom-2.jpg" alt="Serene water" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bedroom-3.jpg" alt="Serene water" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bedroom-4.jpg" alt="Serene water" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bedroom-5.jpg" alt="Serene water" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bedroom-6.jpg" alt="Serene water" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bathroom-1.jpg" alt="Serene water" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bathroom-2.jpg" alt="Serene water" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bathroom-3.jpg" alt="Serene water" data-caption="Bathroom">
+        <div class="caption">Serene water</div>
+      </div>
+      <div class="image-item">
+        <img src="img/tanks/bathroom-4.jpg" alt="Serene water" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-line-1" ></div>
+
+  <!-- Slider 2 -->
+   <header class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-white">
+        <h1 class="display-4 fw-bold">Karia's</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">Malad-West, 2-BHK</li>
+          </ol>
+          <div class="title-line"></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+  <div class="image-slider">
+    <div class="image-track">
+      <div class="image-item">
+        <img src="img/karias/livingroom-1.jpg" alt="City skyline" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/livingroom-2.jpg" alt="Sunset horizon" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/livingroom-3.jpg" alt="Calm ocean" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/dining-1.jpg" alt="City skyline" data-caption="Dining Area">
+        <div class="caption">Dining Area</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/dining-2.jpg" alt="Sunset horizon" data-caption="Dining Area">
+        <div class="caption">Dining Area</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/kitchen-1.jpg" alt="Calm ocean" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/kitchen-2.jpg" alt="City skyline" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/bedroom-1.jpg" alt="Sunset horizon" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/bedroom-2.jpg" alt="Calm ocean" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/bedroom-3.jpg" alt="Sunset horizon" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/bedroom-4.jpg" alt="Calm ocean" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/bedroom-5.jpg" alt="Sunset horizon" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/bedroom-6.jpg" alt="Calm ocean" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/bathroom-1.jpg" alt="Sunset horizon" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/karias/bathroom-2.jpg" alt="Calm ocean" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-line-1" ></div>
+
+  <!-- Slider 3 -->
+   <header class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-white">
+        <h1 class="display-4 fw-bold">Danda's Home</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">Pedder Road, 3-BHK</li>
+          </ol>
+          <div class="title-line"></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+  <div class="image-slider">
+    <div class="image-track">
+      <div class="image-item">
+        <img src="img/dandas/livingroom-1.jpg" alt="City skyline" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/livingroom-2.jpg" alt="City skyline" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/livingroom-3.jpg" alt="City skyline" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/kitchen-1.jpg" alt="City skyline" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/kitchen-2.jpg" alt="City skyline" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/kitchen-3.jpg" alt="City skyline" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/bathroom-1.jpg" alt="City skyline" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/bathroom-2.jpg" alt="City skyline" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/bathroom-3.jpg" alt="City skyline" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/dandas/bathroom-4.jpg" alt="City skyline" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-line-1" ></div>
+
+  <!-- Slider 4 -->
+   <header class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-white">
+        <h1 class="display-4 fw-bold">Vasa's</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">Pedder Road, Kitchen, Bedroom & Toilet</li>
+          </ol>
+          <div class="title-line"></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+  <div class="image-slider">
+    <div class="image-track">
+      <div class="image-item">
+        <img src="img/vasas/kitchen-1.jpg" alt="City skyline" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/vasas/kitchen-2.jpg" alt="Sunset horizon" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/vasas/bedroom-1.jpg" alt="Calm ocean" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/vasas/bedroom-2.jpg" alt="City skyline" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-line-1" ></div>
+
+  <!-- Slider 5 -->
+   <header class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-white">
+        <h1 class="display-4 fw-bold">Wadhwa House</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">Andheri-West, 1-BHK</li>
+          </ol>
+          <div class="title-line"></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+  <div class="image-slider">
+    <div class="image-track">
+      <div class="image-item">
+        <img src="img/wadhwas/livingroom-1.jpg" alt="City skyline" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/wadhwas/livingroom-2.jpg" alt="Sunset horizon" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/wadhwas/livingroom-3.jpg" alt="Calm ocean" data-caption="Living Room">
+        <div class="caption">Living Room</div>
+      </div>
+      <div class="image-item">
+        <img src="img/wadhwas/kitchen-1.jpg" alt="City skyline" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/wadhwas/kitchen-2.jpg" alt="Sunset horizon" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/wadhwas/kitchen-3.jpg" alt="Calm ocean" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/wadhwas/bathroom-1.jpg" alt="City skyline" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/wadhwas/bathroom-2.jpg" alt="Sunset horizon" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/wadhwas/bathroom-3.jpg" alt="Calm ocean" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-line-1" ></div>
+
+  <!-- Slider 6 -->
+   <header class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-white">
+        <h1 class="display-4 fw-bold">Patel's</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">Dahisar-East, 1-BHK</li>
+          </ol>
+          <div class="title-line"></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+  <div class="image-slider">
+    <div class="image-track">
+      <div class="image-item">
+        <img src="img/patels/kitchen-1.jpg" alt="City skyline" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/patels/kitchen-2.jpg" alt="Sunset horizon" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/patels/kitchen-3.jpg" alt="Calm ocean" data-caption="Kitchen">
+        <div class="caption">Kitchen</div>
+      </div>
+      <div class="image-item">
+        <img src="img/patels/bathroom-1.jpg" alt="City skyline" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/patels/bathroom-2.jpg" alt="Sunset horizon" data-caption="Bathroom">
+        <div class="caption">Bathroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/patels/bedroom-1.jpg" alt="Calm ocean" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/patels/bedroom-2.jpg" alt="City skyline" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+      <div class="image-item">
+        <img src="img/patels/bedroom-3.jpg" alt="Sunset horizon" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <button class="popup-button popup-left" id="popupPrev">&larr;</button>
+      <img id="popupImage" src="" alt="">
+      <div class="popup-caption" id="popupCaption"></div>
+      <button class="popup-button popup-right" id="popupNext">&rarr;</button>
+      <button class="popup-button popup-close" id="popupClose">✕</button>
+    </div>
+  </div>
+
+<!-- Gallery 1 
 <header class="page-header">
   <div class="page-header-overlay"></div>
   <div class="container">
@@ -164,11 +678,11 @@
     <img src="img/tanks/bathroom-4.jpg" data-caption="Bathroom" alt="">
     <div class="caption">Bathroom</div>
   </div>
-</div>
+</div>-->
 
-<div class="title-line-1" ></div>
+<!-- <div class="title-line-1" ></div> -->
 
-<!-- Gallery 2 -->
+<!-- Gallery 2 
 <header class="page-header">
   <div class="page-header-overlay"></div>
   <div class="container">
@@ -246,11 +760,11 @@
     <img src="img/karias/bathroom-2.jpg" data-caption="Bathroom" alt="">
     <div class="caption">Bathroom</div>
   </div>
-</div>
+</div>-->
 
-<div class="title-line-1" ></div>
+<!-- <div class="title-line-1" ></div> -->
 
-<!-- Gallery 2 -->
+<!-- Gallery 2 
 <header class="page-header">
   <div class="page-header-overlay"></div>
   <div class="container">
@@ -308,11 +822,11 @@
     <img src="img/dandas/bathroom-4.jpg" data-caption="Bathroom" alt="">
     <div class="caption">Bathroom</div>
   </div>
-</div>
+</div>-->
 
-<div class="title-line-1" ></div>
+<!-- <div class="title-line-1" ></div> -->
 
-<!-- Gallery 2 -->
+<!-- Gallery 2 
 <header class="page-header">
   <div class="page-header-overlay"></div>
   <div class="container">
@@ -346,11 +860,11 @@
     <img src="img/vasas/bedroom-2.jpg" data-caption="Bedroom" alt="">
     <div class="caption">Bedroom</div>
   </div>
-</div>
+</div>-->
 
-<div class="title-line-1" ></div>
+<!-- <div class="title-line-1" ></div> -->
 
-<!-- Gallery 2 -->
+<!-- Gallery 2 
 <header class="page-header">
   <div class="page-header-overlay"></div>
   <div class="container">
@@ -404,11 +918,11 @@
     <img src="img/wadhwas/bathroom-3.jpg" data-caption="Bathroom" alt="">
     <div class="caption">Bathroom</div>
   </div>
-</div>
+</div>-->
 
-<div class="title-line-1" ></div>
+<!-- <div class="title-line-1" ></div> -->
 
-<!-- Gallery 2 -->
+<!-- Gallery 2 
 <header class="page-header">
   <div class="page-header-overlay"></div>
   <div class="container">
@@ -458,9 +972,9 @@
     <img src="img/patels/bathroom-2.jpg" data-caption="Bathroom" alt="">
     <div class="caption">Bathroom</div>
   </div>
-</div>
+</div>-->
 
-<!-- Reusable Popup Template -->
+<!-- Reusable Popup Template 
 <div class="popup" id="popup">
   <img id="popup-img" src="" alt="Popup Image">
   <div class="caption" id="popup-caption"></div>
@@ -469,7 +983,7 @@
     <button class="btn" id="closeBtn">✖ Close</button>
     <button class="btn" id="nextBtn">Right ⟶</button>
   </div>
-</div>
+</div>-->
 
 
 
@@ -522,6 +1036,130 @@
     
     <!-- Custom JS -->
     <script>
+  const popup = document.getElementById('popup');
+  const popupImage = document.getElementById('popupImage');
+  const popupCaption = document.getElementById('popupCaption');
+  const popupPrev = document.getElementById('popupPrev');
+  const popupNext = document.getElementById('popupNext');
+  const popupClose = document.getElementById('popupClose');
+
+  let currentSliderImages = null;
+  let currentIndex = 0;
+  let autoScrollIntervals = [];
+
+  // Duplicate images for seamless scroll
+  document.querySelectorAll('.image-slider').forEach(slider => {
+    const track = slider.querySelector('.image-track');
+    const items = track.innerHTML;
+    track.innerHTML += items;
+  });
+
+  // Popup logic
+  document.querySelectorAll('.image-item img').forEach((img) => {
+    img.addEventListener('click', () => {
+      const parentTrack = img.closest('.image-track');
+      const images = [...parentTrack.querySelectorAll('.image-item img')].slice(0, parentTrack.children.length / 2);
+      currentSliderImages = images;
+      currentIndex = images.indexOf(img);
+      showPopupImage(img);
+      pauseAllAutoScroll();
+    });
+  });
+
+  function showPopupImage(img) {
+    popupImage.src = img.src;
+    popupCaption.textContent = img.dataset.caption || img.alt || '';
+    popup.style.display = 'flex';
+  }
+
+  function showPrevImage() {
+    if (!currentSliderImages) return;
+    currentIndex = (currentIndex - 1 + currentSliderImages.length) % currentSliderImages.length;
+    showPopupImage(currentSliderImages[currentIndex]);
+  }
+
+  function showNextImage() {
+    if (!currentSliderImages) return;
+    currentIndex = (currentIndex + 1) % currentSliderImages.length;
+    showPopupImage(currentSliderImages[currentIndex]);
+  }
+
+  popupPrev.addEventListener('click', showPrevImage);
+  popupNext.addEventListener('click', showNextImage);
+
+  popupClose.addEventListener('click', () => {
+    popup.style.display = 'none';
+    resumeAllAutoScroll();
+  });
+
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+      resumeAllAutoScroll();
+    }
+  });
+
+  // Auto-scroll logic
+  function startAutoScroll(slider) {
+    const track = slider.querySelector('.image-track');
+    const scrollStep = 1;
+    const scrollDelay = 20; // milliseconds
+    const totalScroll = track.scrollWidth / 2;
+
+    const interval = setInterval(() => {
+      if (popup.style.display === 'flex') return;
+
+      slider.scrollLeft += scrollStep;
+
+      if (slider.scrollLeft >= totalScroll) {
+        slider.scrollLeft = 0;
+      }
+    }, scrollDelay);
+
+    autoScrollIntervals.push({ slider, interval });
+  }
+
+  function pauseAllAutoScroll() {
+    autoScrollIntervals.forEach(obj => clearInterval(obj.interval));
+    autoScrollIntervals = [];
+  }
+
+  function resumeAllAutoScroll() {
+    document.querySelectorAll('.image-slider').forEach(slider => {
+      startAutoScroll(slider);
+    });
+  }
+
+  document.querySelectorAll('.image-slider').forEach(slider => {
+    startAutoScroll(slider);
+  });
+
+  // Swipe detection on popup image
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  popupImage.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  popupImage.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+  });
+
+  function handleSwipeGesture() {
+    const swipeThreshold = 50; // minimum px swipe for action
+    const deltaX = touchEndX - touchStartX;
+
+    if (deltaX > swipeThreshold) {
+      showPrevImage(); // swipe right
+    } else if (deltaX < -swipeThreshold) {
+      showNextImage(); // swipe left
+    }
+  }
+</script>
+
+    <!-- <script>
       const popup = document.getElementById('popup');
       const popupImg = document.getElementById('popup-img');
       const popupCaption = document.getElementById('popup-caption');
@@ -591,7 +1229,8 @@
       // Example usage:
       setImagesPerRow("gallery1", 4);
       setImagesPerRow("gallery2", 4);
-    </script>
+    </script> -->
+
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>
   </body>
