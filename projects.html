@@ -122,6 +122,7 @@
       .image-item {
       flex: 0 0 auto;
       width: 150px;
+      height: 150px;
       text-align: center;
     }
       .image-item img {
@@ -1045,17 +1046,17 @@
   let currentSliderImages = null;
   let currentIndex = 0;
   let autoScrollIntervals = [];
+  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 
-  // Duplicate items for seamless scroll
+  // Duplicate track items for seamless looping
   document.querySelectorAll('.image-slider').forEach(slider => {
     const track = slider.querySelector('.image-track');
-    const items = track.innerHTML;
-    track.innerHTML += items; // Double the content
+    track.innerHTML += track.innerHTML;
     slider.scrollLeft = 0;
   });
 
   // Popup logic
-  document.querySelectorAll('.image-item img').forEach((img) => {
+  document.querySelectorAll('.image-item img').forEach(img => {
     img.addEventListener('click', () => {
       const parentTrack = img.closest('.image-track');
       const images = [...parentTrack.querySelectorAll('.image-item img')].slice(0, parentTrack.children.length / 2);
@@ -1093,10 +1094,9 @@
 
   function closePopup() {
     popup.style.display = 'none';
-    resumeAllAutoScroll();
+    if (!isMobile) resumeAllAutoScroll();
   }
 
-  // Auto-scroll logic with glitch-free loop
   function startAutoScroll(slider) {
     const track = slider.querySelector('.image-track');
     const scrollStep = 1;
@@ -1105,9 +1105,7 @@
 
     const interval = setInterval(() => {
       if (popup.style.display === 'flex') return;
-
       slider.scrollLeft += scrollStep;
-
       if (slider.scrollLeft >= singleSetWidth) {
         slider.scrollLeft -= singleSetWidth;
       }
@@ -1127,16 +1125,13 @@
     });
   }
 
-  // Swipe and drag on slider only (not popup)
+  // Drag-to-scroll (mouse + touch)
   document.querySelectorAll('.image-slider').forEach(slider => {
     const track = slider.querySelector('.image-track');
-    startAutoScroll(slider);
-
     let isDragging = false;
-    let startX;
-    let scrollStart;
+    let startX = 0;
+    let scrollStart = 0;
 
-    // Mouse
     slider.addEventListener('mousedown', (e) => {
       isDragging = true;
       startX = e.pageX;
@@ -1146,22 +1141,20 @@
 
     slider.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
-      e.preventDefault();
-      const dx = e.pageX - startX;
-      slider.scrollLeft = scrollStart - dx;
+      const deltaX = e.pageX - startX;
+      slider.scrollLeft = scrollStart - deltaX;
     });
 
     slider.addEventListener('mouseup', () => {
       isDragging = false;
-      resumeAllAutoScroll();
+      if (!isMobile) resumeAllAutoScroll();
     });
 
     slider.addEventListener('mouseleave', () => {
       isDragging = false;
-      resumeAllAutoScroll();
+      if (!isMobile) resumeAllAutoScroll();
     });
 
-    // Touch
     slider.addEventListener('touchstart', (e) => {
       isDragging = true;
       startX = e.touches[0].pageX;
@@ -1171,32 +1164,21 @@
 
     slider.addEventListener('touchmove', (e) => {
       if (!isDragging) return;
-      const dx = e.touches[0].pageX - startX;
-      slider.scrollLeft = scrollStart - dx;
+      const deltaX = e.touches[0].pageX - startX;
+      slider.scrollLeft = scrollStart - deltaX;
     });
 
     slider.addEventListener('touchend', () => {
       isDragging = false;
-      resumeAllAutoScroll();
     });
 
-    // Optional: left/right nav buttons inside slider
-    const leftBtn = slider.querySelector('.slider-left');
-    const rightBtn = slider.querySelector('.slider-right');
-
-    if (leftBtn && rightBtn) {
-      leftBtn.addEventListener('click', () => {
-        slider.scrollLeft -= 200;
-        pauseAllAutoScroll();
-      });
-
-      rightBtn.addEventListener('click', () => {
-        slider.scrollLeft += 200;
-        pauseAllAutoScroll();
-      });
+    // Start auto-scroll only on desktop
+    if (!isMobile) {
+      startAutoScroll(slider);
     }
   });
 </script>
+
 
 
     <!-- <script>
