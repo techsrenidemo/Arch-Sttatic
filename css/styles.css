@@ -60,6 +60,12 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .logo {
+    height: 7rem !important;
+    width: auto;
+  }
+}
 .min-vh-100 {
     min-height: 80vh !important;
 }
