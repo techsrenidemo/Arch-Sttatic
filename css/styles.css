@@ -65,7 +65,20 @@ body {
     height: 7rem !important;
     width: auto;
   }
+
 }
+
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: calc(1rem + 2.3vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .fw-line {
+    font-size: 1.2rem !important;
+  }
+}
+
 .min-vh-100 {
     min-height: 80vh !important;
 }
@@ -269,7 +282,7 @@ p.lead.mb-5 {
     width: 20rem;
     height: 3px;
     background-color: var(--color-light);
-    margin: 0.75rem auto 0;
+    margin: 1.75rem auto 0;
   }
   
 }
