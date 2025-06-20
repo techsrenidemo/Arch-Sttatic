@@ -1054,6 +1054,11 @@
     slider.scrollLeft = 0;
   });
 
+      // Disable right-click on slider and popup images
+    document.querySelectorAll('.image-item img, #popupImage').forEach(img => {
+      img.addEventListener('contextmenu', (e) => e.preventDefault());
+    });
+
   // Popup logic
   document.querySelectorAll('.image-item img').forEach(img => {
     img.addEventListener('click', () => {
