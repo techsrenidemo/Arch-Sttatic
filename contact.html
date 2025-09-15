@@ -131,69 +131,69 @@
             </div>
             
             <div class="contact-form-wrapper bg-white p-4 p-md-5 rounded-3 shadow-sm">
-              <form id="contactForm">
-                <div class="row g-4">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="firstName" class="form-label">First Name</label>
-                      <input type="text" class="form-control" id="firstName" required>
-                    </div>
-                  </div>
-                  
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="lastName" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="lastName" required>
-                    </div>
-                  </div>
-                  
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" required>
-                    </div>
-                  </div>
-                  
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="phone" class="form-label">Phone</label>
-                      <input type="tel" class="form-control" id="phone">
-                    </div>
-                  </div>
-                  
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label for="projectType" class="form-label">Project Type</label>
-                      <select class="form-select" id="projectType">
-                        <option selected disabled>Select Project Type</option>
-                        <option value="residential">Architecture Design</option>
-                        <option value="interior">Interior Design</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                  </div>
-                  
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label for="message" class="form-label">Message</label>
-                      <textarea class="form-control" id="message" rows="5" required></textarea>
-                    </div>
-                  </div>
-                  
-                  <div class="col-12">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="newsletter">
-                      <label class="form-check-label" for="newsletter">
-                        Subscribe to our newsletter for updates and insights
-                      </label>
-                    </div>
-                  </div>
-                  
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary btn-lg px-5" id="submitBtn">Send Message</button>
+              <form id="contactForm" action="mail.php" method="POST">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="firstName" id="firstName" required>
                   </div>
                 </div>
-              </form>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" id="lastName" required>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" name="phone" id="phone">
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="projectType" class="form-label">Project Type</label>
+                    <select class="form-select" name="projectType" id="projectType" required>
+                      <option selected disabled value="">Select Project Type</option>
+                      <option value="Architecture Design">Architecture Design</option>
+                      <option value="Interior Design">Interior Design</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="newsletter" id="newsletter" value="Yes">
+                    <label class="form-check-label" for="newsletter">
+                      Subscribe to our newsletter for updates and insights
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary btn-lg px-5" id="submitBtn">Send Message</button>
+                </div>
+              </div>
+            </form>
             </div>
           </div>
         </div>
